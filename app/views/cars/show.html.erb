@@ -19,3 +19,8 @@
 <p> Description
   <%= @car.model %>
 </p>
+
+<%= link_to "List of cars", cars_path %>
+<%= link_to "Delete car", car_path(@car),
+                          method: :delete,
+                          data: { confirm: "Are you sure?"} %>
