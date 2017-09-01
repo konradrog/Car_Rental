@@ -25,3 +25,8 @@
 <p> Car
   <%= @car.model %>
 </p>
+
+<%= link_to "all reservations", reservations_path%>
+<%= link_to "Delete", reservation_path(@reservation),
+                          method: :delete,
+                          data: { confirm: "Are you sure?"} %>

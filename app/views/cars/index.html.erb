@@ -3,7 +3,7 @@
 <h2>Booking</h2>
 
 <%= link_to "new reservation", new_reservation_path %>
-
+<%= link_to "all reservations", reservations_path %>
 <% @cars.each do |car| %>
 <p>
   <%= car.brand %>

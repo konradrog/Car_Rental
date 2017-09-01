@@ -1,0 +1,12 @@
+<h2>  All reservations </h2>
+<%= link_to "HOME", cars_path %>
+
+<% @reservations.each do |reservation| %>
+  <p>
+    <%= reservation.name %>
+    <%= reservation.surname %>
+    <%= link_to "more info", reservation_path(reservation)%>
+  </p>
+<% end %>
+
+<%= link_to "new reservation", new_reservation_path %>
