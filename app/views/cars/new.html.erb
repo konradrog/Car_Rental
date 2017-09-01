@@ -1,0 +1,35 @@
+<p> k </p>
+
+<div>
+  <%= form_for @car do |f| %>
+    <p>
+      <%= f.label "Car brand" %>
+      <%= f.text_field :brand %>
+    </p>
+
+    <p>
+      <%= f.label "Model" %>
+      <%= f.text_field :model %>
+    </p>
+
+    <p>
+      <%= f.label "Year" %>
+      <%= f.text_field :year %>
+    </p>
+
+    <p>
+      <%= f.label "Price for one day" %>
+      <%= f.text_field :price %>
+    </p>
+
+    <p>
+      <%= f.label "Description" %>
+      <%= f.text_area :description %>
+    </p>
+
+    <p>
+      <%= f.label :brand %>
+      <%= f.text_field :brand %>
+    </p>
+  <% end %>
+</div>
