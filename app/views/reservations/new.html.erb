@@ -1,0 +1,36 @@
+<div>
+  <%= form_for @reservation do |f| %>
+    <p>
+      <%= f.label "Name: " %>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label "Surname: " %>
+      <%= f.text_field :surname %>
+    </p>
+    <p>
+      <%= f.label "E-mail: " %>
+      <%= f.text_field :e_mail %>
+    </p>
+    <p>
+      <%= f.label "Address: " %>
+      <%= f.text_field :address %>
+    </p>
+    <p>
+      <%= f.label "From: " %>
+      <%= f.text_field :from_date %>
+    </p>
+    <p>
+      <%= f.label "To: " %>
+      <%= f.text_field :to_date %>
+    </p>
+    <p>
+      <%= f.label "Car id: " %>
+      <%= f.text_field :car_id %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+
+  <% end %>
+</div>

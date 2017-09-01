@@ -1,5 +1,9 @@
 <p> all available cars will be here </p>
 
+<h2>Booking</h2>
+
+<%= link_to "new reservation", new_reservation_path %>
+
 <% @cars.each do |car| %>
 <p>
   <%= car.brand %>
@@ -8,4 +12,4 @@
 </p>
 <% end %>
 
-<%= link_to "Dodaj samochód", new_car_path  %>
+<%= link_to "add new car", new_car_path  %>
