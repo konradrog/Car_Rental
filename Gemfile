@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'carrierwave-postgresql'
+gem 'postgresql_lo_streamer'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise'
