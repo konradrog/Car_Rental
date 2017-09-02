@@ -20,6 +20,7 @@
   <%= @car.model %>
 </p>
 
+<%= image_tag(@car.image_url(:thumb).to_s) %>
 <%= image_tag(@car.image_url.to_s) %>
 
 <%= link_to "List of cars", cars_path %>
