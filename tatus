@@ -1,0 +1,53 @@
+[33mcommit 08bed7dfb37827337f738f978d6101b78b974024[m
+Author: konradrog <konrad1210@gmail.com>
+Date:   Fri Sep 1 17:03:02 2017 +0200
+
+    finish base model of reservation with views and navigation
+
+[33mcommit 1f796c1357ebd77189474a7a53a51de6ce0c6d93[m
+Author: konradrog <konrad1210@gmail.com>
+Date:   Fri Sep 1 15:45:59 2017 +0200
+
+    new reservation, show reservation
+
+[33mcommit b2fbc7785fe7ff353e42452afd207c4ef621e943[m
+Author: konradrog <konrad1210@gmail.com>
+Date:   Fri Sep 1 15:13:14 2017 +0200
+
+    Add navigation to Car and delete option
+
+[33mcommit 013ef177a88932f3e3c494d11ac734a4fe5ce007[m
+Author: konradrog <konrad1210@gmail.com>
+Date:   Fri Sep 1 14:53:01 2017 +0200
+
+    Add empty controller Reservation. Working Adding new Car, show car
+
+[33mcommit 9675e83f1f726434a751cf1e4e9d92896474390e[m
+Author: konradrog <konrad1210@gmail.com>
+Date:   Fri Sep 1 14:28:46 2017 +0200
+
+    correct dir names and simple form to new car added
+
+[33mcommit a590fc9451aad0ad8e4157cdfa63444efd2a1a5e[m
+Author: konradrog <konrad1210@gmail.com>
+Date:   Fri Sep 1 13:43:04 2017 +0200
+
+    change Price type in cars
+
+[33mcommit 93bd098cbab6ed4581327e1cf61e4b6cd9063032[m
+Author: konradrog <konrad1210@gmail.com>
+Date:   Fri Sep 1 12:45:05 2017 +0200
+
+    Add simple relations
+
+[33mcommit 186a193890c3044c6eec8926d2add51211b4fcac[m
+Author: konradrog <konrad1210@gmail.com>
+Date:   Fri Sep 1 12:04:10 2017 +0200
+
+    cofigure base devise admin
+
+[33mcommit 91c2b04cc7249c2868666cf6dd9a99a640545bed[m
+Author: konradrog <konrad1210@gmail.com>
+Date:   Fri Sep 1 11:38:28 2017 +0200
+
+    init project

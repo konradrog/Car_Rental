@@ -24,3 +24,6 @@
 <%= link_to "Delete car", car_path(@car),
                           method: :delete,
                           data: { confirm: "Are you sure?"} %>
+
+<%= render "opinions/form" %>
+<%= render @car.opinions %>

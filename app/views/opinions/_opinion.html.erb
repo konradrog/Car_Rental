@@ -1,0 +1,9 @@
+<p> Author
+  <%= opinion.author %>
+</p>
+
+<p>
+  <%= opinion.text %>
+</p>
+
+<%= link_to "Delete opinion", car_path(@car), method: :delete, data: {confirm: "Are you sure?"} %>
