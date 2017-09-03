@@ -1,20 +1,21 @@
 class OpinionsController < ApplicationController
   def create
-    @car = Car.find(params[:id])
-    @opinion = Opinion.new(film_id: @film.id)
+    @car = Car.find(params[:car_id])
+    @opinion = Opinion.new(car_id: @car.id)
     @opinion.attributes = opinion_params
 
     if @opinion.save
-      redirect_to film_path(@film)
+      redirect_to car_path(@car)
     else
-      render "car/show"
+      render "cars/show"
     end
   end
 
   def destroy
-  end
+    opinion = Opinion.find(params[:id])
+    opinion.destroy
 
-  def show
+    redirect_to car_path(opinion.car)
   end
 
   private

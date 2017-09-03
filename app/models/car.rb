@@ -1,6 +1,6 @@
 class Car < ApplicationRecord
   has_many :reservations
-  has_many :opinions
+  has_many :opinions, dependent: :destroy
 
   mount_uploader :image, ImageUploader
 
