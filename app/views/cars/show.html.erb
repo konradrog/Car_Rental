@@ -23,9 +23,13 @@
 <%= image_tag @car.image.url %>
 
 <%= link_to "List of cars", cars_path %>
-<%= link_to "Delete car", car_path(@car),
+
+<% if admin_signed_in? %>
+  <%= link_to "Delete car", car_path(@car),
                           method: :delete,
                           data: { confirm: "Are you sure?"} %>
-<%= link_to "edit", edit_car_path(@car) %>
+  <%= link_to "edit", edit_car_path(@car) %>
+<% end %>
+
 <%= render "opinions/form" %>
 <%= render @car.opinions %>

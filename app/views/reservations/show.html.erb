@@ -29,9 +29,10 @@
 <p> Car
   <%= @car.model %>
 </p>
-
-<%= link_to "all reservations", reservations_path%>
-<%= link_to "Delete", reservation_path(@reservation),
+<% if admin_signed_in? %>
+  <%= link_to "all reservations", reservations_path%>
+  <%= link_to "Delete", reservation_path(@reservation),
                           method: :delete,
                           data: { confirm: "Are you sure?"} %>
-<%= link_to "Edit", edit_reservation_path%>
+  <%= link_to "Edit", edit_reservation_path%>
+<% end %>

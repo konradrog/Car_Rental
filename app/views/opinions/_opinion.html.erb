@@ -6,5 +6,7 @@
   <%= opinion.text %>
 </p>
 
-<%= link_to "Delete opinion",
-car_opinion_path(@car, opinion), method: :delete, data: {confirm: "Are you sure?"} %>
+<% if admin_signed_in? %>
+  <%= link_to "Delete opinion", car_opinion_path(@car, opinion),
+                                method: :delete, data: {confirm: "Are you sure?"} %>
+<% end %>
