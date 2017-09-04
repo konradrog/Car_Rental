@@ -11,6 +11,15 @@ class Reservation < ApplicationRecord
   validates :car_id, presence: true
   validates :phone_number, presence: true, length: { is: 9 }
 
-end
+  validate :to_date_be_greater_than_from_date
 
-/\w+@+\w+.+\w/
+  def to_date_be_greater_than_from_date
+    if from_date.day > to_date.day && from_date.month == to_date.month
+      errors.add(:from_date, "to date must be higher than from date")
+    end
+  end
+
+  # def booked
+  #   car_id = Reservation.car_id
+  # end
+end
