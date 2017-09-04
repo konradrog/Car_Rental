@@ -9,7 +9,6 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.create(reservation_params)
-
     if @reservation.new_record?
       render "new"
     else
@@ -20,6 +19,7 @@ class ReservationsController < ApplicationController
   def show
     @reservation = Reservation.find(params[:id])
     @car = Car.find(@reservation.car_id)
+    @cars_to_choose = Reservation.check_if_av(@reservation.car_id, @reservation.from_date, @reservation.to_date)
   end
 
   def destroy
