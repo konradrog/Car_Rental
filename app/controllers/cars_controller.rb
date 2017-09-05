@@ -50,6 +50,15 @@ class CarsController < ApplicationController
     render "index"
   end
 
+  def highest_first
+    @cars = Car.all.order(price: :desc)
+  end
+
+  def lowest_first
+    @cars = Car.all.order(:price)
+    render "index"
+  end
+
   private
 
   def car_params

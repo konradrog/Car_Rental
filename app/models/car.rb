@@ -14,4 +14,6 @@ class Car < ApplicationRecord
   def self.search(q)
     Car.where("brand ilike ?", "%#{q}%")
   end
+
+  
 end

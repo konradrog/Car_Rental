@@ -5,6 +5,8 @@
     <%= text_field_tag :q, params[:q], placeholder: "Search for..." %>
     <%= submit_tag "Search" %>
   <% end %>
+  <%= link_to "Price: highest first", cars_path, method: :highest_first %>
+  <%= link_to "Price: lowest first", cars_path, method: :lowest_first %>
 </div>
 
 <div class="row">
@@ -18,6 +20,7 @@
           <%= car.brand %>
           <%= car.model %>
         </h4>
+        <p> <%= car.price %> $ per day </p>
         <%= link_to "more info", car_path(car), class: "btn btn-primary" %>
       </div>
     </div>
