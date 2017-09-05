@@ -11,7 +11,7 @@ class Car < ApplicationRecord
   validates :description, presence: true
   validates :image, presence: true
 
-  # def for_rent
-  #   Car.where(from_date.)
-  # end
+  def self.search(q)
+    Car.where("brand ilike ?", "%#{q}%")
+  end
 end

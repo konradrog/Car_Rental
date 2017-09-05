@@ -1,8 +1,4 @@
-<h1> Car </h1>
-
-<p> Brand
-  <%= @car.brand %>
-</p>
+<h1> <%= @car.brand %> </h1>
 
 <p> Model
   <%= @car.model %>
@@ -20,9 +16,9 @@
   <%= @car.model %>
 </p>
 
-<%= image_tag @car.image.url %>
-
-<%= link_to "List of cars", cars_path %>
+<div>
+  <%= image_tag @car.image.url, width: 200 %>
+</div>
 
 <% if admin_signed_in? %>
   <%= link_to "Delete car", car_path(@car),
@@ -31,5 +27,7 @@
   <%= link_to "edit", edit_car_path(@car) %>
 <% end %>
 
-<%= render "opinions/form" %>
-<%= render @car.opinions %>
+<div>
+  <%= render "opinions/form" %>
+  <%= render @car.opinions %>
+</div>

@@ -1,15 +1,30 @@
-<p> all available cars will be here </p>
+<h1> All Cars </h1>
 
-<h2>Booking</h2>
+<div>
+  <%= form_tag "/search", method: "get" do %>
+    <%= text_field_tag :q, params[:q], placeholder: "Search for..." %>
+    <%= submit_tag "Search" %>
+  <% end %>
+</div>
 
-<%= link_to "new reservation", new_reservation_path %>
+<div class="row">
 <% @cars.each do |car| %>
-<p>
-  <%= car.brand %>
-  <%= car.model %>
-  <%= link_to "more info", car_path(car) %>
-</p>
+
+  <div class="col-sm-4">
+    <div class="card" style="width: 20rem">
+      <div class="card-body">
+        <%= image_tag car.image.url, width: 250, class: "card-img-top" %>
+        <h4 = class"card-title">
+          <%= car.brand %>
+          <%= car.model %>
+        </h4>
+        <%= link_to "more info", car_path(car), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+
 <% end %>
+</div>
 
 <% if admin_signed_in? %>
   <%= link_to "add new car", new_car_path  %>

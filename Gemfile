@@ -22,6 +22,7 @@ gem 'mini_magick'
 gem 'carrierwave-postgresql'
 gem 'postgresql_lo_streamer'
 gem 'validates_timeliness', '~> 4.0'
+gem 'twitter-bootstrap-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise'

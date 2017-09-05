@@ -40,7 +40,9 @@ class ReservationsController < ApplicationController
     else
       render "edit"
     end
+  end
 
+  def search
   end
 
   private
