@@ -31,8 +31,12 @@
       <%= f.text_field :to_date, placeholder: "YYYY-MM-DD" %>
     </p>
     <p>
-      <%= f.label "Car id: " %>
-      <%= f.text_field :car_id %>
+      <%= f.label "Car: " %>
+      <%= f.select(:car_id) do %>
+        <% @cars.each do |c| %>
+          <%= content_tag(:option, c.brand + " " + c.model, value: c.id) %>
+        <% end %>
+      <% end %>
     </p>
     <p>
       <%= f.submit "New reservation", class: "btn" %>

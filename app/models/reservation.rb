@@ -15,7 +15,9 @@ class Reservation < ApplicationRecord
 
   def if_car_is_free
     Reservation.where(car_id: car_id).each do |el|
-      if from_date.day <= el.to_date.day
+      if from_date == nil || to_date == nil
+        errors.add(:from_date, "choose oder dates")
+      elsif from_date.day <= el.to_date.day
         errors.add(:from_date, "choose oder dates. car is unavilible then")
       end
     end
