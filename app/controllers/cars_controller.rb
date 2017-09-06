@@ -2,7 +2,11 @@ class CarsController < ApplicationController
   #before_action :authenticate_admin!
 
   def index
-    @cars = Car.all
+    if params[:order] == "highest_first" || nil
+      @cars = Car.all.order(price: :desc)
+    else
+      @cars = Car.all.order(:price)
+    end
   end
 
   def new
@@ -47,15 +51,6 @@ class CarsController < ApplicationController
 
   def search
     @cars = Car.search(params[:q])
-    render "index"
-  end
-
-  def highest_first
-    @cars = Car.all.order(price: :desc)
-  end
-
-  def lowest_first
-    @cars = Car.all.order(:price)
     render "index"
   end
 

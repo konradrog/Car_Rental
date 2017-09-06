@@ -15,5 +15,5 @@ class Car < ApplicationRecord
     Car.where("brand ilike ?", "%#{q}%")
   end
 
-  
+
 end

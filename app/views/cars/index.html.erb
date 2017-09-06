@@ -5,8 +5,8 @@
     <%= text_field_tag :q, params[:q], placeholder: "Search for..." %>
     <%= submit_tag "Search" %>
   <% end %>
-  <%= link_to "Price: highest first", cars_path, method: :highest_first %>
-  <%= link_to "Price: lowest first", cars_path, method: :lowest_first %>
+    <%= link_to "Price: lowest first", cars_path %>
+    <%= link_to "highest first", params.permit!.merge(order: "highest_first") %>
 </div>
 
 <div class="row">
