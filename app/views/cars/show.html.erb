@@ -1,33 +1,38 @@
-<h1> <%= @car.brand %> </h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <h1> <%= @car.brand %> </h1>
 
-<p> Model
-  <%= @car.model %>
-</p>
+      <p> Model
+        <%= @car.model %>
+      </p>
 
-<p> Year
-  <%= @car.year %>
-</p>
+      <p> Year
+        <%= @car.year %>
+      </p>
 
-<p> Price
-  <%= @car.price %>
-</p>
+      <p> Price
+        <%= @car.price %>
+      </p>
 
-<p> Description
-  <%= @car.model %>
-</p>
+      <p> Description
+        <%= @car.model %>
+      </p>
+    </div>
+    <div class="col-lg-1">
+      <%= image_tag @car.image.url, width: 400 %>
+    </div>
+    </div>
+  </div>
+  <% if admin_signed_in? %>
+    <%= link_to "Delete car", car_path(@car),
+                            method: :delete,
+                            data: { confirm: "Are you sure?"} %>
+    <%= link_to "edit", edit_car_path(@car) %>
+  <% end %>
 
-<div>
-  <%= image_tag @car.image.url, width: 400 %>
-</div>
-
-<% if admin_signed_in? %>
-  <%= link_to "Delete car", car_path(@car),
-                          method: :delete,
-                          data: { confirm: "Are you sure?"} %>
-  <%= link_to "edit", edit_car_path(@car) %>
-<% end %>
-
-<div>
-  <%= render "opinions/form" %>
-  <%= render @car.opinions %>
+  <div>
+    <%= render "opinions/form" %>
+    <%= render @car.opinions %>
+  </div>
 </div>

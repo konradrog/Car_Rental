@@ -3,20 +3,22 @@
 <div>
   <%= form_tag "/search", method: "get" do %>
     <%= text_field_tag :q, params[:q], placeholder: "Search for..." %>
-    <%= submit_tag "Search" %>
+    <%= submit_tag "Search", class: "btn" %>
   <% end %>
-    <%= link_to "Price: lowest first", cars_path %>
-    <%= link_to "highest first", params.permit!.merge(order: "highest_first") %>
+</div>
+<div>
+  <%= link_to "Price: lowest first", cars_path %> |
+  <%= link_to "highest first", params.permit!.merge(order: "highest_first") %>
 </div>
 
 <div class="row">
 <% @cars.each do |car| %>
 
   <div class="col-sm-4">
-    <div class="card" style="width: 20rem">
+    <div class="card" style="width: 250">
       <div class="card-body">
-        <%= image_tag car.image.url, width: 250, class: "card-img-top" %>
-        <h4 = class"card-title">
+        <%= image_tag car.image.url, width: 252, class: "card-img-top" %>
+        <h4 class="card-title">
           <%= car.brand %>
           <%= car.model %>
         </h4>
