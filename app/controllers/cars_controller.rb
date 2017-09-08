@@ -3,9 +3,9 @@ class CarsController < ApplicationController
 
   def index
     if params[:order] == "highest_first" || nil
-      @cars = Car.all.order(price: :desc)
+      @cars = Car.all.order(price: :desc).paginate(page: params[:page], per_page: 6)
     else
-      @cars = Car.all.order(:price)
+      @cars = Car.all.order(:price).paginate(page: params[:page], per_page: 6)
     end
   end
 

@@ -30,7 +30,7 @@
 
 <% end %>
 </div>
-
+<%= will_paginate @cars %>
 <% if admin_signed_in? %>
   <%= link_to "add new car", new_car_path  %>
   <%= link_to "all reservations", reservations_path %>
