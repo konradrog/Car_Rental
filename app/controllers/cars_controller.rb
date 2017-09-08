@@ -50,7 +50,7 @@ class CarsController < ApplicationController
   end
 
   def search
-    @cars = Car.search(params[:q])
+    @cars = Car.search(params[:q]).paginate(page: params[:page], per_page: 6)
     render "index"
   end
 
