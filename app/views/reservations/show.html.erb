@@ -1,32 +1,32 @@
-<p> Name
+<p> <strong>Name</strong>
   <%= @reservation.name %>
 </p>
 
-<p> Surname
+<p> <strong>Surname</strong>
   <%= @reservation.surname %>
 </p>
 
-<p> E_mail
+<p> <strong>E_mail</strong>
   <%= @reservation.e_mail %>
 </p>
 
-<p> Address
+<p> <strong>Address</strong>
   <%= @reservation.address %>
 </p>
 
-<p> Phone number
+<p> <strong>Phone number</strong>
   <%= @reservation.phone_number %>
 </p>
 
-<p> From
-  <%= @reservation.from_date %>
+<p> <strong>From</strong>
+  <%= @reservation.from_date.strftime("%m - %d - %Y") %>
 </p>
 
-<p> To
-  <%= @reservation.to_date %>
+<p> <strong>To</strong>
+  <%= @reservation.to_date.strftime("%m - %d - %Y") %>
 </p>
 
-<p> Car
+<p> <strong>Car</strong>
   <%= @car.model %>
 </p>
 <% if admin_signed_in? %>

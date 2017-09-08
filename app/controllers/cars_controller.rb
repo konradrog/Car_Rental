@@ -30,9 +30,19 @@ class CarsController < ApplicationController
 
   def destroy
     car = Car.find(params[:id])
-    car.destroy
+    reservations = Reservation.where(car_id: params[:id]);
+    if reservations.size == 0
+      begin
+        car.destroy
+      rescue PG::Error => e
+        raise e if e.message != "lo_unlink failed"
+      end
+      redirect_to cars_path
+    else
+      flash[:notice] = "You can nott delete car with reservation"
+      redirect_to car_path(car)
+    end
 
-    redirect_to cars_path
   end
 
   def edit

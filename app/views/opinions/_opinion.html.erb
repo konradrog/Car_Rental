@@ -1,10 +1,12 @@
-<p> Author
+<p> <strong>Author: </strong>
   <%= opinion.author %>
 </p>
 
 <p>
   <%= opinion.text %>
+
 </p>
+<p>_________________________________________________</p>
 
 <% if admin_signed_in? %>
   <%= link_to "Delete opinion", car_opinion_path(@car, opinion),

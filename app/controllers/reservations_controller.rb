@@ -32,6 +32,7 @@ class ReservationsController < ApplicationController
 
   def edit
     @reservation = Reservation.find(params[:id])
+    @cars = Car.all.order(:brand)
   end
 
   def update

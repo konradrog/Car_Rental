@@ -3,19 +3,19 @@
     <div class="col-lg-3">
       <h1> <%= @car.brand %> </h1>
 
-      <p> Model
+      <p> <strong>Model</strong>
         <%= @car.model %>
       </p>
 
-      <p> Year
+      <p> <strong>Year</strong>
         <%= @car.year %>
       </p>
 
-      <p> Price
+      <p> <strong>Price</strong>
         <%= @car.price %>
       </p>
 
-      <p> Description
+      <p> <strong>Description</strong>
         <%= @car.model %>
       </p>
     </div>
@@ -24,9 +24,10 @@
     </div>
     </div>
   </div>
+
+  <%= link_to "delete", "/foo", method: :delete %>
   <% if admin_signed_in? %>
-    <%= link_to "Delete car", car_path(@car),
-                            method: :delete,
+    <%= link_to "Delete car", car_path(@car), method: :delete,
                             data: { confirm: "Are you sure?"} %>
     <%= link_to "edit", edit_car_path(@car) %>
   <% end %>
